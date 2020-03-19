@@ -1,5 +1,5 @@
 //
-//  GFAlert.swift
+//  GFAlertVC.swift
 //  GHFollowers
 //
 //  Created by DevAndDeploy on 18/03/2020.
@@ -10,7 +10,7 @@ import UIKit
 
 class GFAlertVC: UIViewController {
 
-    let containerView = UIView()
+    let containerView = GFAlertView()
     let titleLabel = GFTitleLabel(textAlignment: .center, fontSize: 20)
     let messageLabel = GFBodyLabel(textAlignment: .center)
     let actionButton = GFButton(backgroundColor: .systemPink, title: "OK")
@@ -44,12 +44,6 @@ class GFAlertVC: UIViewController {
     
     private func configureContainerView() {
         view.addSubview(containerView)
-        
-        containerView.backgroundColor = .systemBackground
-        containerView.layer.cornerRadius = 16
-        containerView.layer.borderWidth = 2
-        containerView.layer.borderColor = UIColor.white.cgColor
-        containerView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
             containerView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
