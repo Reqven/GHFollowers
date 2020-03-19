@@ -16,6 +16,8 @@
 		BBC2CB322423AB5F00342347 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC2CB312423AB5F00342347 /* User.swift */; };
 		BBC2CB352423AF5400342347 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC2CB342423AF5400342347 /* NetworkManager.swift */; };
 		BBC2CB382423B8FB00342347 /* GFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC2CB372423B8FB00342347 /* GFError.swift */; };
+		BBC2CB3B2423BF6900342347 /* FollowerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC2CB3A2423BF6900342347 /* FollowerCell.swift */; };
+		BBC2CB3D2423BFD600342347 /* GFAvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC2CB3C2423BFD600342347 /* GFAvatarImageView.swift */; };
 		BBCE4AD42423915A003B803D /* FavoritesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCE4AD12423915A003B803D /* FavoritesVC.swift */; };
 		BBCE4AD52423915A003B803D /* FollowersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCE4AD22423915A003B803D /* FollowersVC.swift */; };
 		BBCE4AD62423915A003B803D /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCE4AD32423915A003B803D /* SearchVC.swift */; };
@@ -39,6 +41,8 @@
 		BBC2CB312423AB5F00342347 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BBC2CB342423AF5400342347 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		BBC2CB372423B8FB00342347 /* GFError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFError.swift; sourceTree = "<group>"; };
+		BBC2CB3A2423BF6900342347 /* FollowerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerCell.swift; sourceTree = "<group>"; };
+		BBC2CB3C2423BFD600342347 /* GFAvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAvatarImageView.swift; sourceTree = "<group>"; };
 		BBCE4AD12423915A003B803D /* FavoritesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesVC.swift; sourceTree = "<group>"; };
 		BBCE4AD22423915A003B803D /* FollowersVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FollowersVC.swift; sourceTree = "<group>"; };
 		BBCE4AD32423915A003B803D /* SearchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
@@ -120,6 +124,14 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		BBC2CB392423BF3600342347 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				BBC2CB3A2423BF6900342347 /* FollowerCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		BBCE4AD024239134003B803D /* Screens */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,12 +153,14 @@
 		BBCE4ADA242391D5003B803D /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				BBC2CB392423BF3600342347 /* Cells */,
 				BBCE4ADD242391FA003B803D /* GFAlertVC.swift */,
 				BBC2CB2C2423947A00342347 /* GFAlertView.swift */,
 				BBCE4ADF242391FA003B803D /* GFTitleLabel.swift */,
 				BBCE4ADE242391FA003B803D /* GFBodyLabel.swift */,
 				BBCE4ADC242391FA003B803D /* GFButton.swift */,
 				BBCE4ADB242391FA003B803D /* GFTextField.swift */,
+				BBC2CB3C2423BFD600342347 /* GFAvatarImageView.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -228,6 +242,8 @@
 				BBC2CB2D2423947A00342347 /* GFAlertView.swift in Sources */,
 				BBCE4AD9242391CD003B803D /* UIViewController+Ext.swift in Sources */,
 				BBC2CB322423AB5F00342347 /* User.swift in Sources */,
+				BBC2CB3B2423BF6900342347 /* FollowerCell.swift in Sources */,
+				BBC2CB3D2423BFD600342347 /* GFAvatarImageView.swift in Sources */,
 				BBCE4AE2242391FA003B803D /* GFAlertVC.swift in Sources */,
 				BBC2CB302423AA8200342347 /* Follower.swift in Sources */,
 				32D1FE862403E13000884FEF /* SceneDelegate.swift in Sources */,
