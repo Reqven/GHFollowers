@@ -21,9 +21,8 @@ class GFTextField: UITextField {
     
     init(placeholder: String) {
         super.init(frame: .zero)
-        configure()
-    
         self.placeholder = placeholder
+        configure()
     }
     
     private func configure() {
