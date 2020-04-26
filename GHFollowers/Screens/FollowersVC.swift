@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol FollowersVCDelegate: class {
+    func didRequestFollowers(for username: String)
+}
+
 class FollowersVC: UIViewController {
     
     enum Section { case main }
@@ -15,6 +19,7 @@ class FollowersVC: UIViewController {
     var page: Int = 1
     var username: String!
     var hasMoreFollowers = true
+    var isSearching = false
     var followers: [Follower] = []
     var filteredFollowers: [Follower] = []
     
@@ -123,12 +128,41 @@ extension FollowersVC: UISearchResultsUpdating, UISearchBarDelegate {
     
     func updateSearchResults(for searchController: UISearchController) {
         guard let filter = searchController.searchBar.text, !filter.isEmpty else { return }
+        isSearching = true
         
         filteredFollowers = followers.filter { $0.login.lowercased().contains(filter.lowercased()) }
         updateData(followers: filteredFollowers)
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        isSearching = false
         updateData(followers: followers)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let activeArray = isSearching ? filteredFollowers : followers
+        let follower    = activeArray[indexPath.item]
+        
+        let destinationVC = UserInfoVC()
+        destinationVC.username = follower.login
+        destinationVC.delegate = self
+        let navController = UINavigationController(rootViewController: destinationVC)
+        
+        present(navController, animated: true)
+    } 
+}
+
+
+extension FollowersVC: FollowersVCDelegate {
+    
+    func didRequestFollowers(for username: String) {
+        self.username   = username
+        title           = username
+        page            = 1
+        
+        followers.removeAll()
+        filteredFollowers.removeAll()
+        collectionView.setContentOffset(.zero, animated: true)
+        getFollowers(page: page)
     }
 }
