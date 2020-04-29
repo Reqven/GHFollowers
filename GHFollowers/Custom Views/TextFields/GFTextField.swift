@@ -41,6 +41,6 @@ class GFTextField: UITextField {
         
         backgroundColor = .tertiarySystemBackground
         autocorrectionType = .no
+        clearButtonMode = .whileEditing
     }
-    
 }

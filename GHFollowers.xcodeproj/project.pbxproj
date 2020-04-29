@@ -39,6 +39,9 @@
 		BBCE4AE2242391FA003B803D /* GFAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCE4ADD242391FA003B803D /* GFAlertVC.swift */; };
 		BBCE4AE3242391FA003B803D /* GFBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCE4ADE242391FA003B803D /* GFBodyLabel.swift */; };
 		BBCE4AE4242391FA003B803D /* GFTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCE4ADF242391FA003B803D /* GFTitleLabel.swift */; };
+		BBF181A72459A9CC001F9000 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF181A62459A9CC001F9000 /* PersistenceManager.swift */; };
+		BBF181A92459B4EB001F9000 /* FavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF181A82459B4EB001F9000 /* FavoriteCell.swift */; };
+		BBF181AC2459C123001F9000 /* GFTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF181AB2459C123001F9000 /* GFTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +79,9 @@
 		BBCE4ADD242391FA003B803D /* GFAlertVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GFAlertVC.swift; sourceTree = "<group>"; };
 		BBCE4ADE242391FA003B803D /* GFBodyLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GFBodyLabel.swift; sourceTree = "<group>"; };
 		BBCE4ADF242391FA003B803D /* GFTitleLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GFTitleLabel.swift; sourceTree = "<group>"; };
+		BBF181A62459A9CC001F9000 /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
+		BBF181A82459B4EB001F9000 /* FavoriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCell.swift; sourceTree = "<group>"; };
+		BBF181AB2459C123001F9000 /* GFTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				BBC2CB342423AF5400342347 /* NetworkManager.swift */,
+				BBF181A62459A9CC001F9000 /* PersistenceManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -218,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				BBC2CB3A2423BF6900342347 /* FollowerCell.swift */,
+				BBF181A82459B4EB001F9000 /* FavoriteCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -246,6 +254,7 @@
 		BBCE4ADA242391D5003B803D /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				BBF181AA2459C0FA001F9000 /* TabBarControllers */,
 				BB3BF50B2424007500D5F43B /* ViewControllers */,
 				BB3BF50C2424008200D5F43B /* ImageViews */,
 				BB3BF50A2424004B00D5F43B /* TextFields */,
@@ -255,6 +264,14 @@
 				BBC2CB392423BF3600342347 /* Cells */,
 			);
 			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		BBF181AA2459C0FA001F9000 /* TabBarControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BBF181AB2459C123001F9000 /* GFTabBarController.swift */,
+			);
+			path = TabBarControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -339,6 +356,8 @@
 				BBC2CB3D2423BFD600342347 /* GFAvatarImageView.swift in Sources */,
 				BBCE4AE2242391FA003B803D /* GFAlertVC.swift in Sources */,
 				BB18F098245581DD0093869E /* UserInfoVC.swift in Sources */,
+				BBF181A72459A9CC001F9000 /* PersistenceManager.swift in Sources */,
+				BBF181A92459B4EB001F9000 /* FavoriteCell.swift in Sources */,
 				BB18F0A42455C3690093869E /* GFRepoItemVC.swift in Sources */,
 				BB18F09C245591950093869E /* GFSecondaryLabel.swift in Sources */,
 				BB18F09A245591350093869E /* GFUserInfoVC.swift in Sources */,
@@ -357,6 +376,7 @@
 				BB18F0A02455BBED0093869E /* GFItemInfoView.swift in Sources */,
 				BBCE4AE3242391FA003B803D /* GFBodyLabel.swift in Sources */,
 				BB18F09E245598620093869E /* Constants.swift in Sources */,
+				BBF181AC2459C123001F9000 /* GFTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
