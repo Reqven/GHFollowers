@@ -30,13 +30,13 @@ class GFUserInfoVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        addSubViews()
+        view.addSubviews(avatarImageView, usernameLabel, nameLabel, locationImageView, locationLabel, bioLabel)
         layoutUI()
         configureUIElements()
     }
     
     func configureUIElements() {
-        avatarImageView.downloadImage(from: user.avatarUrl)
+        downloadAvatarImage()
         usernameLabel.text  = user.login
         nameLabel.text      = user.name ?? ""
         locationLabel.text  = user.location ?? "No location"
@@ -46,14 +46,13 @@ class GFUserInfoVC: UIViewController {
         locationImageView.tintColor = .secondaryLabel
     }
     
-    func addSubViews() {
-        view.addSubview(avatarImageView)
-        view.addSubview(usernameLabel)
-        view.addSubview(nameLabel)
-        view.addSubview(locationImageView)
-        view.addSubview(locationLabel)
-        view.addSubview(bioLabel)
+    func downloadAvatarImage() {
+        NetworkManager.shared.downloadImage(from: user.avatarUrl) { [weak self] (image) in
+            guard let self = self else { return }
+            DispatchQueue.main.async { self.avatarImageView.image = image }
+        }
     }
+    
     
     func layoutUI() {
         let textImagePadding: CGFloat = 12

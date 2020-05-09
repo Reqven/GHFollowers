@@ -19,10 +19,9 @@ class GFTextField: UITextField {
         fatalError("init(coder:) has not been implemented")
     }
     
-    init(placeholder: String) {
-        super.init(frame: .zero)
+    convenience init(placeholder: String) {
+        self.init(frame: .zero)
         self.placeholder = placeholder
-        configure()
     }
     
     private func configure() {

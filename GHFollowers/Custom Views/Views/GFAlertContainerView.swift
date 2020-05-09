@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GFAlertView: UIView {
+class GFAlertContainerView: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -19,9 +19,8 @@ class GFAlertView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    init() {
-        super.init(frame: .zero)
-        configure()
+    convenience init() {
+        self.init(frame: .zero)
     }
     
     private func configure() {
